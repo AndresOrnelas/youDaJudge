@@ -1,3 +1,33 @@
 // Place all the styles related to the MainPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Score page
+body{
+  background: url(http://koshots.files.wordpress.com/2010/09/koshots_wallpaper_cage_c_1280x1024.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#scorecardcontainer{
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
+	border: 1px black solid;
+	background-color: white;
+}
+
+#columnleft{
+	float: left;
+	padding-left: 5px
+
+}
+
+#columnright{
+	float: right; 
+	padding-right: 5px;
+
+}
+
