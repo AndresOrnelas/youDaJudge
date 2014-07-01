@@ -4,22 +4,25 @@
 	<title>Score the fight!</title>
 </head>
 <body>
-  <h1>Fight</h1>
+  <center><h1>Score the Fight!</h1></center>
   <div id="scorecardcontainer">
    <form>
+       <center><h2>Round 1</h2></center>
+       <div><%= image_tag 'silva.jpg', id: "fighter2" %></div>
+       <div><%= image_tag 'gsp.jpg', id: "fighter1" %></div><br>
     
        <div id="columnleft">
-	      <input type="radio" name="scorel" value="ten">10<br>
-	      <input type="radio" name="scorel" value="nine">9<br>
-	      <input type="radio" name="scorel" value="eight">8<br>
+	      <input class="chb" id="chb-1" type="radio" name="scorel" value="ten"><label for="chb-1"></label>  10 <br><br>
+	      <input class="chb" id="chb-2" type="radio" name="scorel" value="ten"><label for="chb-2"></label>  9 <br><br>
+	      <input class="chb" id="chb-3"type="radio" name="scorel" value="ten"><label for="chb-3"></label>  8 <br><br>
 	    </div>
+
 	    <div id="columnright">
-	      <input type="radio" name="scorer" value="ten">10<br>
-	      <input type="radio" name="scorer" value="nine">9<br>
-	      <input type="radio" name="scorer" value="eight">8<br>
-	      <input type="submit" value="Submit">
+	      <input class="chb" id="chb-4" type="radio" name="scorel" value="ten"><label for="chb-4"></label>  10 <br><br>
+	      <input class="chb" id="chb-5" type="radio" name="scorel" value="ten"><label for="chb-5"></label>  9 <br><br>
+	      <input class="chb" id="chb-6"type="radio" name="scorel" value="ten"><label for="chb-6"></label>  8 <br><br>
 	     </div>
-     
+	    <center><div id="submit"><input type="submit" value="Submit" class="myButton"></center>
    </form>
   </div>
 
