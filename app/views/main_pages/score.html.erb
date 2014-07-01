@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>Score the fight!</title>
+	<link href='http://fonts.googleapis.com/css?family=Julee' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <center><h1>Score the Fight!</h1></center>
   <div id="scorecardcontainer">
    <form>
        <center><h2>Round 1</h2></center>
-       <div><%= image_tag 'silva.jpg', id: "fighter2" %></div>
+       <div><%=image_tag 'silva.jpg', id: "fighter2" %></div>
        <div><%= image_tag 'gsp.jpg', id: "fighter1" %></div><br>
     
        <div id="columnleft">
@@ -18,11 +19,11 @@
 	    </div>
 
 	    <div id="columnright">
-	      <input class="chb" id="chb-4" type="radio" name="scorel" value="ten"><label for="chb-4"></label>  10 <br><br>
-	      <input class="chb" id="chb-5" type="radio" name="scorel" value="ten"><label for="chb-5"></label>  9 <br><br>
-	      <input class="chb" id="chb-6"type="radio" name="scorel" value="ten"><label for="chb-6"></label>  8 <br><br>
+	      <input class="chb" id="chb-4" type="radio" name="scorer" value="ten"><label for="chb-4"></label>  10 <br><br>
+	      <input class="chb" id="chb-5" type="radio" name="scorer" value="ten"><label for="chb-5"></label>  9 <br><br>
+	      <input class="chb" id="chb-6"type="radio" name="scorer" value="ten"><label for="chb-6"></label>  8 <br><br>
 	     </div>
-	    <center><div id="submit"><input type="submit" value="Submit" class="myButton"></center>
+	    <center><div id="submit"><input type="submit" value="Judge" class="myButton"></center>
    </form>
   </div>
 
