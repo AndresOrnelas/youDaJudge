@@ -23,8 +23,10 @@ h2{
 	font-size: 30px;
 }
 
-#scorecardcontainer{
-	margin: 0 auto;
+#scorecardcontainer1{
+	position: fixed;
+	top: 100px;
+	left: 4%;
 	width: 400px;
 	height: 500px;
 	border: 1px black solid;
@@ -37,11 +39,53 @@ h2{
     transition: 1s;
 }
 
-#scorecardcontainer:hover{
+#scorecardcontainer1:hover{
 	opacity: .94;
 }
 
-#columnleft{
+#scorecardcontainer2{
+	position: fixed;
+	top: 100px;
+	left: 35%;
+	width: 400px;
+	height: 500px;
+	border: 1px black solid;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	opacity: 0.72;
+	-webkit-transition: 1s; /* Safari */
+    transition: 1s;
+}
+
+#scorecardcontainer2:hover{
+	opacity: .94;
+}
+
+#scorecardcontainer3{
+	position: fixed;
+	top: 100px;
+	left: 66%;
+	width: 400px;
+	height: 500px;
+	border: 1px black solid;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	opacity: 0.72;
+	-webkit-transition: 1s; /* Safari */
+    transition: 1s;
+}
+
+#scorecardcontainer3:hover{
+	opacity: .94;
+}
+
+
+
+.columnleft{
 	margin-left: 20px;
 	float: left;
 	padding-left: 50px;
@@ -50,7 +94,7 @@ h2{
 	padding-top: 5px;
 }
 
-#columnright{
+.columnright{
 	float: right; 
 	padding-right: 50px;
 	font-size: 26px;
@@ -148,3 +192,4 @@ background-color: #FF0000;
 	margin-bottom: 10px;
 }
 // end of scorecard page
+
