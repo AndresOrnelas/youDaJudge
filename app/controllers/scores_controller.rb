@@ -29,6 +29,8 @@ class ScoresController < ApplicationController
      @score.fight_id = params[:fight_id] 
      # check this line
 
+
+
     respond_to do |format|
       if @score.save
         format.html { redirect_to @score, notice: 'Score was successfully created.' }
@@ -74,5 +76,6 @@ class ScoresController < ApplicationController
     def score_params
       params.require(:score).permit(:r1_f1, :r2_f1, :r3_f1, :r1_f2, :r2_f2, :r3_f2)
     end
+
 
 end

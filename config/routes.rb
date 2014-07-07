@@ -13,6 +13,7 @@ resources :fights
   get 'main_pages/score'
 
   get 'main_pages/results'
+  post 'scores/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

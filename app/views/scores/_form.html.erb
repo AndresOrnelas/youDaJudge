@@ -18,6 +18,7 @@
     <%= f.number_field :r1_f2 %>
     <%= f.number_field :r2_f2 %>
     <%= f.number_field :r3_f2 %>
+    <%= hidden_field_tag params[:fight_id] => 1 %>
     <%= f.submit %>
   </div>
 <% end %>
