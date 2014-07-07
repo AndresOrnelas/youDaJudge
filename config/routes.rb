@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :dashboard
+  root to: "home#index"
   get 'main_pages/login'
 
   get 'main_pages/home'
