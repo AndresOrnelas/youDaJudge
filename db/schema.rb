@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707132930) do
+ActiveRecord::Schema.define(version: 20140707191017) do
+
+  create_table "fights", force: true do |t|
+    t.integer  "fighterone"
+    t.integer  "fightertwo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "fights", ["user_id"], name: "index_fights_on_user_id"
+
+  create_table "scores", force: true do |t|
+    t.integer  "r1_f1"
+    t.integer  "r2_f1"
+    t.integer  "r3_f1"
+    t.integer  "r1_f2"
+    t.integer  "r2_f2"
+    t.integer  "r3_f2"
+    t.integer  "user_id"
+    t.integer  "fight_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

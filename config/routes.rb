@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  resources :scores
+
+  get 'fights/new'
+resources :fights
   devise_for :users
   resources :dashboard
   root to: "home#index"
   get 'main_pages/login'
-
+  get 'dashboard/index'
   get 'main_pages/home'
 
   get 'main_pages/score'

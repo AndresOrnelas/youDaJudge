@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fighterone: 1
+  fightertwo: 1
+
+two:
+  fighterone: 1
+  fightertwo: 1
