@@ -17,18 +17,36 @@
   	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   	<%= submit_tag("Fight 1") %>
 <% end %>
+<% if @score %>
+<div id="myscores">
+<div class="score">
+GSP vs. Anderson Silva
+<br>
+<br>
 
-
-<% a = Score.find_by fight_id: 1, user_id: current_user.id %>
-<% if a %>
-	<%= a.r1_f1 %>
-	<%= a.r2_f1 %>
-	<%= a.r3_f1 %>
-	<%= a.r1_f2 %>
-	<%= a.r2_f2 %>
-	<%= a.r3_f2 %>
+<table id="tab">
+<tr>
+  <th>Fighter</th>
+  <th>Round 1</th> 
+  <th>Round 2</th>
+  <th>Round 3</th>
+</tr>
+	<tr>
+    <td>GSP</td>
+    <td><%= @score.r1_f1 %></td>
+	  <td><%= @score.r2_f1 %></td>
+	  <td><%= @score.r3_f1 %></td>
+  </tr>
+  <tr>
+    <td>Silva</td>
+	  <td><%= @score.r1_f2 %></td>
+	  <td><%= @score.r2_f2 %></td>
+	  <td><%= @score.r3_f2 %></td>
+  </tr>
+</table>
 <% end %>
+</div>
+<div>
 
   </center>
-  <div>
 </body>

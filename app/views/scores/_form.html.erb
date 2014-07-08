@@ -11,16 +11,84 @@
     </div>
   <% end %>
 
-  <h1><%= @id.inspect %></h1>
+<div id="scorecardcontainer1">
+<center><h2>Round 1</h2></center>
+       <div><%=image_tag 'silva.jpg', id: "fighter2" %></div>
+       <div><%= image_tag 'gsp.jpg', id: "fighter1" %></div><br>
+    
+       <div class="columnleft">
+        <%= f.radio_button :r1_f1, '10' %> 
+        <%= label :ten, '10' %><br><br>
+        <%= f.radio_button :r1_f1, '9' %>
+        <%= label :nine, '9' %><br><br>
+        <%= f.radio_button :r1_f1, '8' %>
+        <%= label :eight, '8' %>
+      </div>
 
-  <div class="actions">
-    <%= f.number_field :r1_f1 %>
-    <%= f.number_field :r2_f1 %>
-    <%= f.number_field :r3_f1 %>
-    <%= f.number_field :r1_f2 %>
-    <%= f.number_field :r2_f2 %>
-    <%= f.number_field :r3_f2 %>
-    <%= f.hidden_field :fight_id %>
-    <%= f.submit %>
-  </div>
+      <div class="columnright">
+        <%= f.radio_button :r1_f2, '10' %> 
+        <%= label :ten, '10' %><br><br>
+        <%= f.radio_button :r1_f2, '9' %>
+        <%= label :nine, '9' %><br><br>
+        <%= f.radio_button :r1_f2, '8' %>
+        <%= label :eight, '8' %>
+       </div>
+     <!--  <center><div id="submit"><input type="submit" value="Judge" class="myButton"></center> -->
+</div>
+  <!-- First Round Scorecard -->
+  
+<div id="scorecardcontainer2">
+<center><h2>Round 2</h2></center>
+       <div><%=image_tag 'silva.jpg', id: "fighter2" %></div>
+       <div><%= image_tag 'gsp.jpg', id: "fighter1" %></div><br>
+    
+       <div class="columnleft">
+        <%= f.radio_button :r2_f1, '10' %> 
+        <%= label :ten, '10' %><br><br>
+        <%= f.radio_button :r2_f1, '9' %>
+        <%= label :nine, '9' %><br><br>
+        <%= f.radio_button :r2_f1, '8' %>
+        <%= label :eight, '8' %>
+      </div>
+
+      <div class="columnright">
+        <%= f.radio_button :r2_f2, '10' %> 
+        <%= label :ten, '10' %><br><br>
+        <%= f.radio_button :r2_f2, '9' %>
+        <%= label :nine, '9' %><br><br>
+        <%= f.radio_button :r2_f2, '8' %>
+        <%= label :eight, '8' %>
+       </div>
+     <!--  <center><div id="submit"><input type="submit" value="Judge" class="myButton"></center> -->
+</div>
+ 
+<div id="scorecardcontainer3">
+<center><h2>Round 3</h2></center>
+       <div><%=image_tag 'silva.jpg', id: "fighter2" %></div>
+       <div><%= image_tag 'gsp.jpg', id: "fighter1" %></div><br>
+    
+       <div class="columnleft">
+        <%= f.radio_button :r3_f1, '10' %> 
+        <%= label :ten, '10' %><br><br>
+        <%= f.radio_button :r3_f1, '9' %>
+        <%= label :nine, '9' %><br><br>
+        <%= f.radio_button :r3_f1, '8', class: "chb" %>
+        <%= label :eight, '8' %>
+      </div>
+
+      <div class="columnright">
+        <%= f.radio_button :r3_f2, '10' %> 
+        <%= label :ten, '10' %><br><br>
+        <%= f.radio_button :r3_f2, '9' %>
+        <%= label :nine, '9' %><br><br>
+        <%= f.radio_button :r3_f2, '8' %>
+        <%= label :eight, '8' %>
+       </div>
+     <!--  <center><div id="submit"><input type="submit" value="Judge" class="myButton"></center> -->
+</div>
+
+  <%= f.hidden_field :fight_id %>
+ <center> <%= f.submit "Score the bout", class: "myButton" %></center>
+
+  
 <% end %>

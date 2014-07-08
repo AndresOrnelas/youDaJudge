@@ -27,12 +27,6 @@ class ScoresController < ApplicationController
   def create
     @score = Score.new(score_params)
     @score.user_id = current_user.id
-     # check this line
-
-
-
-
-
     respond_to do |format|
       if @score.save
         format.html { redirect_to :controller => 'dashboard', :action => 'index' }

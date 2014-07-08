@@ -56,3 +56,42 @@ h1{
 #links:hover{
 	color: black;
 }
+
+#myscores{
+	position: fixed;
+	top: 150px;
+	left: 0%;
+	width: 300px;
+	height: 400px;
+	border: 1px black solid;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	opacity: 0.93;
+	-webkit-transition: 1s; /* Safari */
+    transition: 1s;
+    font-size: 20px;
+    font-style: bold;
+
+	
+}
+
+.score{
+	background-color: #8B0000;
+	padding: 9px;
+	border-radius: 30px;
+}
+
+#tab{
+	color: white;
+}
+
+th{
+	font-size: 15px;
+	border: solid white 1px;
+	padding: 2px;	
+}
+td{
+	text-align: center;
+}
