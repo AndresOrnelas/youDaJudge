@@ -18,7 +18,7 @@
 <%= form_tag('/scores/new', method: 'post') do %>
   	<%= hidden_field_tag :fight_id, 1 %>
   	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  	<%= submit_tag("Fight 1") %>
+  	<%= submit_tag("Score GSP vs. Silva", class: "myButton", id: "eventbutton") %>
 <% end %>
 <% if @score %>
 <div id="myscores">
