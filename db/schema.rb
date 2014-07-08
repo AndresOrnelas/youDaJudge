@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707191017) do
+ActiveRecord::Schema.define(version: 20140708154554) do
 
   create_table "fights", force: true do |t|
     t.integer  "fighterone"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20140707191017) do
   end
 
   add_index "fights", ["user_id"], name: "index_fights_on_user_id"
+
+  create_table "friendships", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "scores", force: true do |t|
     t.integer  "r1_f1"
