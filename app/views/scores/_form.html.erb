@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <h1><%= @id.inspect %></h1>
+
   <div class="actions">
     <%= f.number_field :r1_f1 %>
     <%= f.number_field :r2_f1 %>
@@ -18,7 +20,7 @@
     <%= f.number_field :r1_f2 %>
     <%= f.number_field :r2_f2 %>
     <%= f.number_field :r3_f2 %>
-    <%= hidden_field_tag params[:fight_id] => 1 %>
+    <%= f.hidden_field :fight_id %>
     <%= f.submit %>
   </div>
 <% end %>

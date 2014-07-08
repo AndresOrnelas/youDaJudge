@@ -15,6 +15,7 @@ class ScoresController < ApplicationController
   # GET /scores/new
   def new
     @score = Score.new
+    @score.fight_id = params[:fight_id].to_i
   end
 
   # GET /scores/1/edit
@@ -26,7 +27,6 @@ class ScoresController < ApplicationController
   def create
     @score = Score.new(score_params)
     @score.user_id = current_user.id
-     @score.fight_id = params[:fight_id] 
      # check this line
 
 
@@ -74,7 +74,7 @@ class ScoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def score_params
-      params.require(:score).permit(:r1_f1, :r2_f1, :r3_f1, :r1_f2, :r2_f2, :r3_f2)
+      params.require(:score).permit(:r1_f1, :r2_f1, :r3_f1, :r1_f2, :r2_f2, :r3_f2, :fight_id)
     end
 
 
