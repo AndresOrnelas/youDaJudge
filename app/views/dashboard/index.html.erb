@@ -18,6 +18,17 @@
   	<%= submit_tag("Fight 1") %>
 <% end %>
 
+
+<% a = Score.find_by fight_id: 1, user_id: current_user.id %>
+<% if a %>
+	<%= a.r1_f1 %>
+	<%= a.r2_f1 %>
+	<%= a.r3_f1 %>
+	<%= a.r1_f2 %>
+	<%= a.r2_f2 %>
+	<%= a.r3_f2 %>
+<% end %>
+
   </center>
   <div>
 </body>
