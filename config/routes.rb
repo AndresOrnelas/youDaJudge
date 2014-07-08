@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: "home#index"
   
   get 'users/index'
+  get 'users/show'
 
   get 'fights/new'
   get 'main_pages/login'
