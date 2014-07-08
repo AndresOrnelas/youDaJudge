@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
+  resources :friendships
+  resources :fights
   resources :scores
+  resources :dashboard
+  devise_for :users
+  root to: "home#index"
+  
+  get 'users/index'
 
   get 'fights/new'
-resources :fights
-  devise_for :users
-  resources :dashboard
-  root to: "home#index"
   get 'main_pages/login'
   get 'dashboard/index'
   get 'main_pages/home'
-
   get 'main_pages/score'
-
   get 'main_pages/results'
   post 'scores/new'
 

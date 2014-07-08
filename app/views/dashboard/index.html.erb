@@ -28,7 +28,22 @@
 	<%= a.r2_f2 %>
 	<%= a.r3_f2 %>
 <% end %>
+</center>
+<div>
 
-  </center>
-  <div>
+
+
+<div id="users">
+<% for user in @users %>
+  <div class="user">
+    <p>
+      <strong><%=h user.email %></strong>
+      <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+      <div class="clear"></div>
+    </p>
+  </div>
+<% end %>
+</div>
+
+
 </body>
