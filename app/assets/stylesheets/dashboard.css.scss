@@ -84,7 +84,7 @@ h1{
 	border-radius: 30px;
 }
 
-#tab{
+.tab{
 	color: white;
 }
 
@@ -95,4 +95,24 @@ th{
 }
 td{
 	text-align: center;
+}
+
+#friendscores{
+	position: fixed;
+	top: 150px;
+	right: 0%;
+	width: 300px;
+	height: 400px;
+	border: 1px black solid;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	opacity: 0.93;
+	-webkit-transition: 1s; /* Safari */
+    transition: 1s;
+    font-size: 20px;
+    font-style: bold;
+
+	
 }

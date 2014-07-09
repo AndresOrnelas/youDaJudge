@@ -53,6 +53,39 @@ GSP vs. Anderson Silva
 
   </center>
 
+<div id="friendscores">
+<div class="score">
+GSP vs. Anderson Silva
+<br>
+<br>
+<% count = 0 %>
+<% while (@output.length)/2 >= count %>
+<table class="tab">
+<tr>
+  <th>Fighter</th>
+  <th>Round 1</th> 
+  <th>Round 2</th>
+  <th>Round 3</th>
+</tr>
+  <tr>
+    <td>GSP</td>
+    <td><%= @output[count][1][0] %></td>
+    <td><%= @output[count][1][1] %></td>
+    <td><%= @output[count][1][2] %></td>
+  </tr>
+  <tr>
+    <td>Silva</td>
+    <td><%= @output[count][1][3] %></td>
+    <td><%= @output[count][1][4] %></td>
+    <td><%= @output[count][1][5] %></td>
+  </tr>
+</table>
+</div>
+<div>
+<% count = count + 1 %>
+<% end %>
+
+
 
   <p><%= @output %></p>
 </body>
