@@ -4,10 +4,22 @@ class DashboardController < ApplicationController
   	@score = Score.find_by fight_id: 1, user_id: current_user.id
     # @users = User.all
     @user = current_user
-    @friendids = @user.friendships.select(:friend_id)
-    @friendscore = Score.where(user_id: @friendids, fight_id: 1)
-    @output = @friendscore.pluck(:r1_f1, :r1_f2, :r2_f1, :r2_f2, :r3_f1, :r3_f2)
-    @emailarr = @user.friends.pluck(:email)
+    @emails = @user.friends.select { |friend| friend.scores.any? { |score| score.fight_id == 1 } }.collect { |friend| friend.email }
+    # @friendscore = @friends.collect { |friend| friend.scores.select { |score| score.fight_id == 1 } }
+    @output = @emails.collect do |email|
+    	user_id = User.find_by(email: email).id
+    	subarr = []
+    	subarr.push email
+    	subarr.push []
+    	user = Score.find_by(user_id: user_id)
+    	subarr[1].push user.r1_f1
+    	subarr[1].push user.r1_f2
+    	subarr[1].push user.r2_f1
+    	subarr[1].push user.r2_f2
+    	subarr[1].push user.r3_f1
+    	subarr[1].push user.r3_f2
+    	subarr
+    end
 
   end
 
