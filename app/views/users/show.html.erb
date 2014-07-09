@@ -1,13 +1,18 @@
-<h2><a href="/">Home</a></h3>
+<ul class="nav">
+	<li><a href="/">Home</a></li>
+	<li><a href="users/index">Find Your Friends!</a></li>
+</ul>
 
-<h2>Friends</h2>
+<h2>My Friends</h2>
 
 <ul>
   <% for friendship in @user.friendships %>
+  <div class="friend">
     <li>
-      <%=h friendship.friend.email %>
-      (<%= link_to "remove", friendship, :method => :delete %>)
+      <%=h friendship.friend.email %><span>
+      (<%= link_to "remove", friendship, :method => :delete, :class => "remove" %>)</span>
     </li>
+</div>
   <% end %>
 </ul>
 
@@ -15,6 +20,8 @@
 <h2>Friended by Users</h2>
 <ul>
   <% for user in @user.inverse_friends %>
+  <div class="others">
     <li><%=h user.email %></li>
+</div>
   <% end %>
 </ul>
