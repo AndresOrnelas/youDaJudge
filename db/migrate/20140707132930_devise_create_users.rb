@@ -1,6 +1,5 @@
 class DeviseCreateUsers < ActiveRecord::Migration
   def change
-    has_many :fights
     create_table(:users) do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
