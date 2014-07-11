@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :scores
   resources :dashboard
   devise_for :users
-  root to: "dashboard#index"
+  root to: "home#index"
   
   get 'users/index'
   get 'users/show'
